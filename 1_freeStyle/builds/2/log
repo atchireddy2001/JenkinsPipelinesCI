@@ -1,0 +1,184 @@
+Started by user [8mha:////4MtwK8Wt4yQPBZ4bPsG53BghoBnJua4FRP5HtnB5vBSgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/1_freeStyle
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/1_freeStyle/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/hkhcoder/vprofile-project.git # timeout=10
+Fetching upstream changes from https://github.com/hkhcoder/vprofile-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/hkhcoder/vprofile-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 836974e5b091f177f063941723ef72a421ca4a63 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 836974e5b091f177f063941723ef72a421ca4a63 # timeout=10
+Commit message: "Update Vagrantfile"
+ > git rev-list --no-walk 836974e5b091f177f063941723ef72a421ca4a63 # timeout=10
+[1_freeStyle] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MAVEN3/bin/mvn clean install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.visualpathit:vprofile >----------------------
+[INFO] Building Visualpathit VProfile Webapp v2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ vprofile ---
+[INFO] Deleting /var/lib/jenkins/workspace/1_freeStyle/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ vprofile ---
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- jacoco:0.8.4:prepare-agent (jacoco-initialize) @ vprofile ---
+[INFO] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/var/lib/jenkins/workspace/1_freeStyle/target/jacoco.exec
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ vprofile ---
+[INFO] Changes detected - recompiling the module! :source
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 21 source files with javac [debug target 1.8] to target/classes
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] bootstrap class path not set in conjunction with -source 8
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ vprofile ---
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/1_freeStyle/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ vprofile ---
+[INFO] Changes detected - recompiling the module! :dependency
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 5 source files with javac [debug target 1.8] to target/test-classes
+[8mha:////4M+fjplgi+y2IBRm9Ffz8svyKp/jp1LzuG2JxTjUZGzJAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] bootstrap class path not set in conjunction with -source 8
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ vprofile ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.visualpathit.account.controllerTest.UserControllerTest
+11:19:20.227 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(org.springframework.ui.Model)
+11:19:20.244 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(com.visualpathit.account.model.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+11:19:20.249 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/login],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.login(org.springframework.ui.Model,java.lang.String,java.lang.String)
+11:19:20.251 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/ || /welcome],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.welcome(org.springframework.ui.Model)
+11:19:20.252 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/index],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.indexHome(org.springframework.ui.Model)
+11:19:20.253 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getAllUsers(org.springframework.ui.Model)
+11:19:20.254 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users/{id}],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getOneUser(java.lang.String,org.springframework.ui.Model)
+11:19:20.256 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdate(java.lang.String,org.springframework.ui.Model)
+11:19:20.257 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdateProfile(java.lang.String,com.visualpathit.account.model.User,org.springframework.ui.Model)
+11:19:20.262 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/rabbit],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.rabbitmqSetUp()
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+11:19:22.261 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter#532 Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4d0cc83e
+11:19:22.580 [main] INFO  o.s.m.w.MockServletContext#390 Initializing Spring FrameworkServlet ''
+11:19:22.580 [main] INFO  o.s.t.w.s.TestDispatcherServlet#488 FrameworkServlet '': initialization started
+11:19:22.585 [main] INFO  o.s.t.w.s.TestDispatcherServlet#507 FrameworkServlet '': initialization completed in 4 ms
+11:19:22.884 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(org.springframework.ui.Model)
+11:19:22.885 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(com.visualpathit.account.model.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+11:19:22.887 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/login],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.login(org.springframework.ui.Model,java.lang.String,java.lang.String)
+11:19:22.889 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/ || /welcome],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.welcome(org.springframework.ui.Model)
+11:19:22.890 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/index],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.indexHome(org.springframework.ui.Model)
+11:19:22.894 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getAllUsers(org.springframework.ui.Model)
+11:19:22.894 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users/{id}],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getOneUser(java.lang.String,org.springframework.ui.Model)
+11:19:22.895 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdate(java.lang.String,org.springframework.ui.Model)
+11:19:22.895 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdateProfile(java.lang.String,com.visualpathit.account.model.User,org.springframework.ui.Model)
+11:19:22.896 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/rabbit],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.rabbitmqSetUp()
+11:19:22.943 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter#532 Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@7e3cea61
+11:19:22.960 [main] INFO  o.s.m.w.MockServletContext#390 Initializing Spring FrameworkServlet ''
+11:19:22.960 [main] INFO  o.s.t.w.s.TestDispatcherServlet#488 FrameworkServlet '': initialization started
+11:19:22.960 [main] INFO  o.s.t.w.s.TestDispatcherServlet#507 FrameworkServlet '': initialization completed in 0 ms
+11:19:22.995 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(org.springframework.ui.Model)
+11:19:22.996 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(com.visualpathit.account.model.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+11:19:23.000 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/login],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.login(org.springframework.ui.Model,java.lang.String,java.lang.String)
+11:19:23.001 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/ || /welcome],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.welcome(org.springframework.ui.Model)
+11:19:23.008 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/index],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.indexHome(org.springframework.ui.Model)
+11:19:23.008 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getAllUsers(org.springframework.ui.Model)
+11:19:23.009 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users/{id}],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getOneUser(java.lang.String,org.springframework.ui.Model)
+11:19:23.009 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdate(java.lang.String,org.springframework.ui.Model)
+11:19:23.013 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdateProfile(java.lang.String,com.visualpathit.account.model.User,org.springframework.ui.Model)
+11:19:23.014 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/rabbit],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.rabbitmqSetUp()
+11:19:23.117 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter#532 Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@2213c8fe
+11:19:23.137 [main] INFO  o.s.m.w.MockServletContext#390 Initializing Spring FrameworkServlet ''
+11:19:23.137 [main] INFO  o.s.t.w.s.TestDispatcherServlet#488 FrameworkServlet '': initialization started
+11:19:23.137 [main] INFO  o.s.t.w.s.TestDispatcherServlet#507 FrameworkServlet '': initialization completed in 0 ms
+Model data{}
+11:19:23.241 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(org.springframework.ui.Model)
+11:19:23.243 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(com.visualpathit.account.model.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+11:19:23.243 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/login],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.login(org.springframework.ui.Model,java.lang.String,java.lang.String)
+11:19:23.244 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/ || /welcome],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.welcome(org.springframework.ui.Model)
+11:19:23.244 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/index],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.indexHome(org.springframework.ui.Model)
+11:19:23.244 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getAllUsers(org.springframework.ui.Model)
+11:19:23.245 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users/{id}],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getOneUser(java.lang.String,org.springframework.ui.Model)
+11:19:23.251 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdate(java.lang.String,org.springframework.ui.Model)
+11:19:23.251 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdateProfile(java.lang.String,com.visualpathit.account.model.User,org.springframework.ui.Model)
+11:19:23.251 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/rabbit],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.rabbitmqSetUp()
+11:19:23.286 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter#532 Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@7aa5de8c
+11:19:23.297 [main] INFO  o.s.m.w.MockServletContext#390 Initializing Spring FrameworkServlet ''
+11:19:23.299 [main] INFO  o.s.t.w.s.TestDispatcherServlet#488 FrameworkServlet '': initialization started
+11:19:23.301 [main] INFO  o.s.t.w.s.TestDispatcherServlet#507 FrameworkServlet '': initialization completed in 0 ms
+11:19:23.320 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(org.springframework.ui.Model)
+11:19:23.321 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(com.visualpathit.account.model.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+11:19:23.322 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/login],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.login(org.springframework.ui.Model,java.lang.String,java.lang.String)
+11:19:23.323 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/ || /welcome],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.welcome(org.springframework.ui.Model)
+11:19:23.323 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/index],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.indexHome(org.springframework.ui.Model)
+11:19:23.324 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getAllUsers(org.springframework.ui.Model)
+11:19:23.324 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users/{id}],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getOneUser(java.lang.String,org.springframework.ui.Model)
+11:19:23.328 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdate(java.lang.String,org.springframework.ui.Model)
+11:19:23.331 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdateProfile(java.lang.String,com.visualpathit.account.model.User,org.springframework.ui.Model)
+11:19:23.331 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/rabbit],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.rabbitmqSetUp()
+11:19:23.365 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter#532 Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@407858c5
+11:19:23.383 [main] INFO  o.s.m.w.MockServletContext#390 Initializing Spring FrameworkServlet ''
+11:19:23.383 [main] INFO  o.s.t.w.s.TestDispatcherServlet#488 FrameworkServlet '': initialization started
+11:19:23.383 [main] INFO  o.s.t.w.s.TestDispatcherServlet#507 FrameworkServlet '': initialization completed in 0 ms
+11:19:23.403 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(org.springframework.ui.Model)
+11:19:23.404 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/registration],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.registration(com.visualpathit.account.model.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+11:19:23.404 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/login],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.login(org.springframework.ui.Model,java.lang.String,java.lang.String)
+11:19:23.404 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/ || /welcome],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.welcome(org.springframework.ui.Model)
+11:19:23.405 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/index],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.indexHome(org.springframework.ui.Model)
+11:19:23.405 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getAllUsers(org.springframework.ui.Model)
+11:19:23.413 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/users/{id}],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.getOneUser(java.lang.String,org.springframework.ui.Model)
+11:19:23.416 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[GET]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdate(java.lang.String,org.springframework.ui.Model)
+11:19:23.416 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/{username}],methods=[POST]}" onto public final java.lang.String com.visualpathit.account.controller.UserController.userUpdateProfile(java.lang.String,com.visualpathit.account.model.User,org.springframework.ui.Model)
+11:19:23.417 [main] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping#532 Mapped "{[/user/rabbit],methods=[GET]}" onto public java.lang.String com.visualpathit.account.controller.UserController.rabbitmqSetUp()
+11:19:23.446 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter#532 Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@476bdad6
+11:19:23.459 [main] INFO  o.s.m.w.MockServletContext#390 Initializing Spring FrameworkServlet ''
+11:19:23.459 [main] INFO  o.s.t.w.s.TestDispatcherServlet#488 FrameworkServlet '': initialization started
+11:19:23.459 [main] INFO  o.s.t.w.s.TestDispatcherServlet#507 FrameworkServlet '': initialization completed in 0 ms
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.154 s -- in com.visualpathit.account.controllerTest.UserControllerTest
+[INFO] Running com.visualpathit.account.controllerTest.SampleTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in com.visualpathit.account.controllerTest.SampleTest
+[INFO] Running com.visualpathit.account.modelTest.RoleTest
+Test Completed
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.visualpathit.account.modelTest.RoleTest
+[INFO] Running com.visualpathit.account.modelTest.UserTest
+Test Completed
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in com.visualpathit.account.modelTest.UserTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- war:3.2.2:war (default-war) @ vprofile ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [vprofile] in [/var/lib/jenkins/workspace/1_freeStyle/target/vprofile-v2]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/var/lib/jenkins/workspace/1_freeStyle/src/main/webapp]
+[INFO] Webapp assembled in [328 msecs]
+[INFO] Building war: /var/lib/jenkins/workspace/1_freeStyle/target/vprofile-v2.war
+[INFO] 
+[INFO] --- jacoco:0.8.4:report (jacoco-site) @ vprofile ---
+[INFO] Loading execution data file /var/lib/jenkins/workspace/1_freeStyle/target/jacoco.exec
+[INFO] Analyzed bundle 'Visualpathit VProfile Webapp' with 15 classes
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ vprofile ---
+[INFO] Installing /var/lib/jenkins/workspace/1_freeStyle/pom.xml to /var/lib/jenkins/.m2/repository/com/visualpathit/vprofile/v2/vprofile-v2.pom
+[INFO] Installing /var/lib/jenkins/workspace/1_freeStyle/target/vprofile-v2.war to /var/lib/jenkins/.m2/repository/com/visualpathit/vprofile/v2/vprofile-v2.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.317 s
+[INFO] Finished at: 2024-07-15T11:19:29Z
+[INFO] ------------------------------------------------------------------------
+Archiving artifacts
+Finished: SUCCESS

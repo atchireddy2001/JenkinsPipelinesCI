@@ -1,0 +1,149 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1400.v7fd111b_ec82f">
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3908.vd6b_b_5a_a_54010">
+    <script>pipeline 
+{
+    
+  agent any
+  
+  tools 
+  {
+    maven &apos;MAVEN3&apos;
+    jdk &apos;OracleJDK11&apos;
+  }
+
+  //environment 
+  //{
+        // Define environment variables here
+  //}
+
+  stages 
+  {
+    stage(&apos;Fetching code from GIT&apos;) 
+    {
+      steps 
+      {
+        git branch: &apos;main&apos;, url: &apos;https://github.com/hkhcoder/vprofile-project.git&apos;
+      }
+    }
+    
+    stage(&apos;JUnit Testing&apos;) 
+    {
+      steps 
+      {
+        sh &apos;mvn test&apos;
+      }
+    }
+    
+    stage(&apos;CODE_ANALYSIS -- using checkstyle&apos;)
+    {
+            steps
+            {
+                sh &apos;mvn checkstyle:checkstyle&apos;
+            }
+            post
+            {
+                success
+                {
+                    echo &apos;Generated checkstyle results now you can check for directoiry in workshop&apos;
+                }
+            }
+    }
+    
+    stage(&apos;CODE_ANALYSIS -- using SonarScanner &amp; uploading junit jacaco checkstyle results into sonar&apos;)
+    {
+            environment
+            {
+                scannerHome = tool &apos;sonar4.7&apos;   //sonarQube scanner tool name configured in tools section
+            }
+            
+            steps 
+            {
+                withSonarQubeEnv(&apos;sonarServer&apos;) 
+                {
+                    sh &apos;&apos;&apos;${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
+                   -Dsonar.projectName=vprofile-repo \
+                   -Dsonar.projectVersion=1.0 \
+                   -Dsonar.sources=src/ \
+                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
+                   -Dsonar.junit.reportsPath=target/surefire-reports/ \
+                   -Dsonar.jacoco.reportsPath=target/jacoco.exec \
+                   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml&apos;&apos;&apos;
+                }
+            }
+    }
+    
+    stage(&apos;Quality gate - config in sonar server&apos;)
+    {
+            steps
+            {
+                timeout(time: 10, unit: &apos;MINUTES&apos;) 
+                {
+                     waitForQualityGate abortPipeline: true
+                }
+            }
+            
+    }
+    
+    
+    stage(&apos;Building app &amp; Post step Archiving war file of build&apos;) 
+    {
+      steps 
+      {
+        sh &apos;mvn install -DskipTests&apos;
+      }
+
+      post 
+      {
+        success 
+        {
+          archiveArtifacts artifacts: &apos;**/*.war&apos;
+        }
+      }
+    }
+    
+    
+    stage(&apos;Uploading archived Artifact in Nexus repo&apos;)
+    {
+            steps
+            {
+                nexusArtifactUploader(
+                    nexusVersion: &apos;nexus3&apos;,
+                    protocol: &apos;http&apos;,
+                    nexusUrl: &apos;172.31.17.212:8081&apos;,
+                    groupId: &apos;Sample&apos;,
+                    version: &quot;${env.BUILD_ID}_${env.BUILD_TIMESTAMP}&quot;,
+                    repository: &apos;vprofile-repo&apos;,
+                    credentialsId: &apos;nexuscred&apos;,
+                    artifacts: [
+                        [artifactId: &apos;vprofileApp&apos;, 
+                        file: &apos;target/vprofile-v2.war&apos;,
+                        type: &apos;war&apos;]
+                    ]
+                )
+            }
+    }
+    
+     post
+    {
+        success 
+        {
+            slackSend(color: &apos;#36a64f&apos;, message: &quot;Pipeline Successful for &apos;${env.JOB_NAME}&apos; with build num ${env.BUILD_ID}!&quot;, channel: &quot;#cicdjenkinsnotification&quot;)
+        }
+        failure 
+        {
+            slackSend(color: &apos;#ff0000&apos;, message: &quot;Pipeline Failed for &apos;${env.JOB_NAME}&apos; with build num ${env.BUILD_ID}!&quot;, channel: &quot;#cicdjenkinsnotification&quot;)
+        }
+    }
+    
+    
+  }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
